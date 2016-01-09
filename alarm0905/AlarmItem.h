@@ -12,12 +12,19 @@
 {
     NSDate *_AlarmTime;
     NSString *_PuzzleLevel;
+    BOOL _EveryDay;
+    int _AlarmFrequency;
+    BOOL _OnOrOff;
 }
 - (instancetype)initWithAlarmTime:(NSDate *)alarmTime
-                      PuzzleLevel:(NSString *)puzzleLevel;
+                      PuzzleLevel:(NSString *)puzzleLevel
+                          OnOrOff:(BOOL *)onoroff;
 + (instancetype)initItem;
 
 @property (nonatomic, copy) NSDate *AlarmTime;
 @property (nonatomic, copy) NSString *PuzzleLevel;
+@property (nonatomic) BOOL EveryDay;
+@property (nonatomic) int AlarmFrequency;
+@property (nonatomic) BOOL OnOrOff;
 
 @end

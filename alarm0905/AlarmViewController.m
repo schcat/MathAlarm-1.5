@@ -7,11 +7,11 @@
 //
 
 #import "AlarmViewController.h"
+#import "AppDelegate.h"
+#import "ListViewController.h"
 #import "AlarmQuestion.h"
 #import "SetViewController.h"
 #import "AlarmItemStore.h"
-#import "AlarmItem.h"
-#import "AppDelegate.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface AlarmViewController()
@@ -31,12 +31,10 @@
 @synthesize pickerResult4;
 
 @synthesize answer;
-@synthesize answerJudge;
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -48,7 +46,7 @@
     self.audioplayer=[[AVAudioPlayer alloc]initWithContentsOfURL:url error:Nil];
     [self.audioplayer prepareToPlay];
     
-    NSLog(@"Play music");
+//    NSLog(@"Play music");
     
     [self.audioplayer play];
     
@@ -62,22 +60,10 @@
     NSArray *array4 = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", @"0", nil];
     self.pickerResult4 = array4;
 
-    NSArray *itemScan = [[AlarmItemStore sharedStore] allItems];
-    int count = (int)[itemScan count];
-    AlarmItem *itemSeek;
-    
-    NSDate *nowDate = [NSDate date];
     NSString *puzzleLevel;
-    
-    for (int i = 0; i < count; i++) {
-        itemSeek = [itemScan objectAtIndex:i];
-        NSTimeInterval secondsBetweenDates = [nowDate timeIntervalSinceDate:itemSeek.AlarmTime];
-        NSLog(@"SecondsBetweenDates is %f", secondsBetweenDates);
-        if (secondsBetweenDates < 60) {
-            puzzleLevel = itemSeek.PuzzleLevel;
-            NSLog(@"PuzzleLevel is %@", itemSeek.PuzzleLevel);
-        }
-    }
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    puzzleLevel = myDelegate.degreeOfThisAlarm;
+//    NSLog(@"PuzzleLevel is %@", puzzleLevel);
     
     AlarmQuestion *alarmQuestion = [AlarmQuestion initQuestion:puzzleLevel];
     
@@ -85,20 +71,15 @@
     self.tipLable.text = @"Answer the Question ?";
     
     answer = (NSNumber*)alarmQuestion.stringAnswer;
-    
-//    NSNumber *answerJudge = [[NSNumber alloc] init];
-    self.answerJudge = [NSNumber numberWithInt:0];
-    }
+}
 
 - (IBAction)addReminder:(id)sender{
-    
-    //    [self removeNotification];
-    
+
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)])
     {
         
         [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
-        NSLog(@"local information");
+//        NSLog(@"local information");
     }
     
     NSInteger row0 = [resultPicker selectedRowInComponent:0];
@@ -117,28 +98,31 @@
     NSString *number4Int = [pickerResult4 objectAtIndex:row3];
     int number4 = [number4Int intValue];
     
-    NSLog(@"number1 is %d", number1);
-    NSLog(@"number2 is %d", number2);
-    NSLog(@"number3 is %d", number3);
-    NSLog(@"number4 is %d", number4);
-    
     int calculateResult = 0;
     calculateResult = 1000 * number1 + 100 * number2 + 10 * number3 + number4;
     
-    NSLog(@"calculateResult is %d", calculateResult);
+//    NSLog(@"calculateResult is %d", calculateResult);
     
     int answerInt = [answer intValue];
-    NSLog(@"answer is %d", answerInt);
+//    NSLog(@"answer is %d", answerInt);
     
     if (calculateResult - answerInt == 0) {
         self.tipLable.text = @"Your answer is right !";
-        NSLog(@"It's right!");
+//        NSLog(@"It's right!");
         [self.audioplayer stop];
-        self.answerJudge = [NSNumber numberWithInt:1];
+        
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        myDelegate.alarmIsOverOrNot = [NSNumber numberWithInt:1];
+        
+        ListViewController *listViewController = [[ListViewController alloc] init];
+        UINavigationController *navController = [[UINavigationController alloc]
+                                                 initWithRootViewController:listViewController];
+
+        [self presentViewController:navController animated:YES completion:nil];
         
     }else{
         self.tipLable.text = @"It's wrong !";
-        NSLog(@"It's wrong!");
+//        NSLog(@"It's wrong!");
     }
 }
 

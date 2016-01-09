@@ -45,10 +45,7 @@
 
 + (instancetype)initQuestion:(NSString *)puzzleLevel
 {
-//    AlarmItem *item = [[AlarmItem alloc] init];
-//    AlarmItem *item = self.item;
-//    NSString *puzzleLevel = item.PuzzleLevel;
-    NSLog(@"puzzlelevel is %@", puzzleLevel);
+//    NSLog(@"puzzlelevel is %@", puzzleLevel);
     int labelNumber;
     if ([puzzleLevel isEqualToString:@"Level 1: 9*9"])
     {
@@ -84,22 +81,13 @@
             break;
 
     }
-    NSLog(@"rand is %d", arc4random());
-    NSLog(@"rand is %d", randomNum1);
     
     int frountIndex = arc4random() % randomNum1;
     int behindIndex = arc4random() % randomNum2;
     
-    NSLog(@"index1: %d", frountIndex);
-    NSLog(@"index2: %d", behindIndex);
-    
     int num1 = frountIndex;
     int num2 = behindIndex;
     int answer = num1 * num2;
-    
-    NSLog(@"num1: %d", num1);
-    NSLog(@"num2: %d", num2);
-    NSLog(@"answer: %d", answer);
     
     AlarmQuestion *newQuestion = [[AlarmQuestion alloc] init];
     
@@ -107,8 +95,8 @@
     
     newQuestion.showQuestion = [NSString stringWithFormat:@"%d * %d = ?", num1, num2];
         
-    NSLog(@"Question: %@", newQuestion.showQuestion);
-    NSLog(@"Answer: %@", newQuestion.stringAnswer);
+//    NSLog(@"Question: %@", newQuestion.showQuestion);
+//    NSLog(@"Answer: %@", newQuestion.stringAnswer);
     
     return newQuestion;
 }

@@ -7,11 +7,29 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import "AlarmViewController.h"
+#import "ListViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+//    NSNumber *alarmIsOverOrNot;
+//    NSString *degreeOfThisAlarm;
+}
+@property (nonatomic, retain) NSNumber *alarmIsOverOrNot;
+@property (nonatomic, retain) NSString *degreeOfThisAlarm;
 @property (strong, nonatomic) UIWindow *window;
-//@property (strong, nonatomic) UINavigationController *navController;
+
+@property (nonatomic, strong) UILocalNotification *note;
+@property (nonatomic, strong) UILocalNotification *note1;
+@property (nonatomic, strong) UILocalNotification *note2;
+@property (nonatomic, strong) UILocalNotification *note3;
+@property (nonatomic, strong) UILocalNotification *note4;
+
+@property (nonatomic, strong) UILocalNotification *nota1;
+@property (nonatomic, strong) UILocalNotification *nota2;
+@property (nonatomic, strong) UILocalNotification *nota3;
+@property (nonatomic, strong) UILocalNotification *nota4;
 
 @end
 

@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+//#import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @class AlarmItem;
 
@@ -17,6 +20,9 @@
 
 @property (nonatomic, weak) IBOutlet UIDatePicker *datePicker;
 @property (nonatomic, strong) IBOutlet UIPickerView *degreePicker;
+@property (nonatomic, strong) IBOutlet UIButton *alarmFrequency;
+@property (nonatomic, strong) IBOutlet UIStepper *intervalSet;
+@property (nonatomic, strong) IBOutlet UISwitch *mySwitch;
 
 @property (nonatomic, strong) AlarmItem *item;
 

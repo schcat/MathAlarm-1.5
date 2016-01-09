@@ -8,6 +8,7 @@
 
 #import "AlarmItemStore.h"
 #import "AlarmItem.h"
+#import "AppDelegate.h"
 
 @interface AlarmItemStore()
 @property (nonatomic) NSMutableArray *privateItems;
@@ -59,6 +60,17 @@
 -(void)removeItem:(AlarmItem *)item
 {
     [self.privateItems removeObjectIdenticalTo:item];
+    //删除通知
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSLog(@"Delete %@", item.AlarmTime);
+    NSLog(@"Delete %@", myDelegate.note.fireDate);
+    if (item.AlarmTime == myDelegate.note.fireDate) {
+        [[UIApplication sharedApplication] cancelLocalNotification:myDelegate.note];
+        [[UIApplication sharedApplication] cancelLocalNotification:myDelegate.note1];
+        [[UIApplication sharedApplication] cancelLocalNotification:myDelegate.note2];
+        [[UIApplication sharedApplication] cancelLocalNotification:myDelegate.note3];
+        [[UIApplication sharedApplication] cancelLocalNotification:myDelegate.note4];
+    }
 }
 - (void)moveItemAtIndex:(NSUInteger)fromIndex
                 toIndex:(NSUInteger)toIndex

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6932E87F1BD772C200D919D9 /* nverqing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6932E87E1BD772C200D919D9 /* nverqing.wav */; };
+		690CBAFC1C12AAF300DFDC74 /* alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = 690CBAFB1C12AAF300DFDC74 /* alarm.png */; };
+		6932E87F1BD772C200D919D9 /* nverqing.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6932E87E1BD772C200D919D9 /* nverqing.caf */; };
 		69C811201B9A58B9006882AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8111F1B9A58B9006882AE /* main.m */; };
 		69C811231B9A58B9006882AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C811221B9A58B9006882AE /* AppDelegate.m */; };
 		69C8112B1B9A58B9006882AE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69C8112A1B9A58B9006882AE /* Images.xcassets */; };
 		69C8113A1B9A58B9006882AE /* alarm0905Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C811391B9A58B9006882AE /* alarm0905Tests.m */; };
 		69C811451B9A5FC8006882AE /* AlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C811441B9A5FC8006882AE /* AlarmViewController.m */; };
-		69C8114C1B9A7312006882AE /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8114A1B9A7312006882AE /* SetViewController.m */; };
 		69C8114D1B9A7312006882AE /* SetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C8114B1B9A7312006882AE /* SetViewController.xib */; };
 		69C811501B9DD0B8006882AE /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8114F1B9DD0B8006882AE /* ListViewController.m */; };
 		69C811521B9DD231006882AE /* AlarmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C811511B9DD231006882AE /* AlarmViewController.xib */; };
@@ -23,6 +23,9 @@
 		69C8115F1BA85663006882AE /* AlarmQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8115E1BA85663006882AE /* AlarmQuestion.m */; };
 		69C811611BD5FB01006882AE /* shuaixing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 69C811601BD5FB01006882AE /* shuaixing.jpg */; };
 		69C811631BD60493006882AE /* zhizuo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69C811621BD60493006882AE /* zhizuo.wav */; };
+		69CB7A3F1C01C5FB00168154 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C8114A1B9A7312006882AE /* SetViewController.m */; };
+		69CFAE071C101FD6003B643F /* littlestar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69CFAE061C101FD6003B643F /* littlestar.wav */; };
+		69DE7F461C13F7720095D4D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69DE7F451C13F7720095D4D0 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6932E87E1BD772C200D919D9 /* nverqing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = nverqing.wav; path = ../../../../Downloads/nverqing.wav; sourceTree = "<group>"; };
+		690CBAFB1C12AAF300DFDC74 /* alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alarm.png; path = ../../../../Desktop/alarm.png; sourceTree = "<group>"; };
+		6932E87E1BD772C200D919D9 /* nverqing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = nverqing.caf; path = ../../../../Downloads/nverqing.caf; sourceTree = "<group>"; };
 		69C8111A1B9A58B9006882AE /* MathRing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathRing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C8111E1B9A58B9006882AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69C8111F1B9A58B9006882AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		69C8115E1BA85663006882AE /* AlarmQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmQuestion.m; sourceTree = "<group>"; };
 		69C811601BD5FB01006882AE /* shuaixing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = shuaixing.jpg; path = ../../../../Downloads/shuaixing.jpg; sourceTree = "<group>"; };
 		69C811621BD60493006882AE /* zhizuo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = zhizuo.wav; path = ../../../../Downloads/zhizuo.wav; sourceTree = "<group>"; };
+		69CFAE061C101FD6003B643F /* littlestar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = littlestar.wav; path = "../../../../Music/iTunes/iTunes Media/Music/群星/Unknown Album/littlestar.wav"; sourceTree = "<group>"; };
+		69DE7F451C13F7720095D4D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69DE7F461C13F7720095D4D0 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +93,7 @@
 		69C811111B9A58B9006882AE = {
 			isa = PBXGroup;
 			children = (
+				69DE7F451C13F7720095D4D0 /* UIKit.framework */,
 				69C8115B1BA43320006882AE /* Default-568h@2x.png */,
 				69C8111C1B9A58B9006882AE /* alarm0905 */,
 				69C811361B9A58B9006882AE /* alarm0905Tests */,
@@ -107,16 +115,16 @@
 			children = (
 				69C811211B9A58B9006882AE /* AppDelegate.h */,
 				69C811221B9A58B9006882AE /* AppDelegate.m */,
-				69C811491B9A7312006882AE /* SetViewController.h */,
 				69C811561B9DDF18006882AE /* AlarmItemStore.h */,
+				69C811571B9DDF26006882AE /* AlarmItemStore.m */,
 				69C8115D1BA85663006882AE /* AlarmQuestion.h */,
 				69C8115E1BA85663006882AE /* AlarmQuestion.m */,
-				69C811571B9DDF26006882AE /* AlarmItemStore.m */,
+				69C811491B9A7312006882AE /* SetViewController.h */,
 				69C8114A1B9A7312006882AE /* SetViewController.m */,
 				69C8114B1B9A7312006882AE /* SetViewController.xib */,
-				69C8114E1B9DD0B8006882AE /* ListViewController.h */,
 				69C811531B9DD38F006882AE /* AlarmItem.h */,
 				69C811541B9DD399006882AE /* AlarmItem.m */,
+				69C8114E1B9DD0B8006882AE /* ListViewController.h */,
 				69C8114F1B9DD0B8006882AE /* ListViewController.m */,
 				69C811431B9A5FC8006882AE /* AlarmViewController.h */,
 				69C811441B9A5FC8006882AE /* AlarmViewController.m */,
@@ -130,9 +138,11 @@
 		69C8111D1B9A58B9006882AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				690CBAFB1C12AAF300DFDC74 /* alarm.png */,
 				69C811621BD60493006882AE /* zhizuo.wav */,
 				69C811601BD5FB01006882AE /* shuaixing.jpg */,
-				6932E87E1BD772C200D919D9 /* nverqing.wav */,
+				69CFAE061C101FD6003B643F /* littlestar.wav */,
+				6932E87E1BD772C200D919D9 /* nverqing.caf */,
 				69C8111E1B9A58B9006882AE /* Info.plist */,
 				69C8111F1B9A58B9006882AE /* main.m */,
 			);
@@ -205,6 +215,7 @@
 				TargetAttributes = {
 					69C811191B9A58B9006882AE = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = EJKT57U76L;
 					};
 					69C811321B9A58B9006882AE = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -236,12 +247,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6932E87F1BD772C200D919D9 /* nverqing.wav in Resources */,
+				6932E87F1BD772C200D919D9 /* nverqing.caf in Resources */,
 				69C8112B1B9A58B9006882AE /* Images.xcassets in Resources */,
 				69C8115C1BA43320006882AE /* Default-568h@2x.png in Resources */,
+				690CBAFC1C12AAF300DFDC74 /* alarm.png in Resources */,
 				69C811521B9DD231006882AE /* AlarmViewController.xib in Resources */,
 				69C811631BD60493006882AE /* zhizuo.wav in Resources */,
 				69C811611BD5FB01006882AE /* shuaixing.jpg in Resources */,
+				69CFAE071C101FD6003B643F /* littlestar.wav in Resources */,
 				69C8114D1B9A7312006882AE /* SetViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,11 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				69C811501B9DD0B8006882AE /* ListViewController.m in Sources */,
+				69CB7A3F1C01C5FB00168154 /* SetViewController.m in Sources */,
 				69C811551B9DD399006882AE /* AlarmItem.m in Sources */,
 				69C811451B9A5FC8006882AE /* AlarmViewController.m in Sources */,
 				69C811581B9DDF26006882AE /* AlarmItemStore.m in Sources */,
 				69C811231B9A58B9006882AE /* AppDelegate.m in Sources */,
-				69C8114C1B9A7312006882AE /* SetViewController.m in Sources */,
 				69C811201B9A58B9006882AE /* main.m in Sources */,
 				69C8115F1BA85663006882AE /* AlarmQuestion.m in Sources */,
 			);
@@ -328,6 +341,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				New_Setting = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -365,6 +379,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				New_Setting = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -374,10 +389,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhixue Li (EJKT57U76L)";
 				INFOPLIST_FILE = alarm0905/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.schcat.mathalarm;
 				PRODUCT_MODULE_NAME = MathRing;
 				PRODUCT_NAME = MathRing;
+				PROVISIONING_PROFILE = "9e270fbc-438f-4f5a-b68f-c6757d74a46c";
 			};
 			name = Debug;
 		};
@@ -385,10 +403,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Zhixue Li (EJKT57U76L)";
 				INFOPLIST_FILE = alarm0905/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.schcat.mathalarm;
 				PRODUCT_MODULE_NAME = MathRing;
 				PRODUCT_NAME = MathRing;
+				PROVISIONING_PROFILE = "9e270fbc-438f-4f5a-b68f-c6757d74a46c";
 			};
 			name = Release;
 		};

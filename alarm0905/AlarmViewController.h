@@ -8,7 +8,9 @@
 
 //#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 #import "SetViewController.h"
+#import "AlarmItem.h"
 
 @interface AlarmViewController : UIViewController
 
@@ -21,7 +23,5 @@
 @property (nonatomic, strong) NSArray *pickerResult4;
 
 @property (nonatomic, strong) AlarmItem *item;
-
-@property (nonatomic, retain) NSNumber *answerJudge;
 
 @end

@@ -25,7 +25,6 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self){
-  //      [[AlarmItemStore sharedStore] createContacts];
         
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"Alarm";
@@ -36,7 +35,6 @@
         navItem.rightBarButtonItem = bbi;
         navItem.leftBarButtonItem = self.editButtonItem;
     }
-    //  NSLog(@"%lu", (unsigned long)[[[BNRItemStore sharedStore] allItems] count]);
     return self;
 }
 
@@ -58,7 +56,7 @@
 {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
-    NSLog(@"ok!");
+//    NSLog(@"ok!");
 }
 
 #pragma mark - Table view data source
@@ -78,12 +76,25 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell =
-    [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+    [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1
                            reuseIdentifier:@"UITableViewCell"];
     NSArray *items = [[AlarmItemStore sharedStore] allItems];
     AlarmItem *item = items[indexPath.row];
-    //   NSLog(@"oh");
     cell.textLabel.text = [item description];
+    
+    UIFont *newFont = [UIFont systemFontOfSize:16];
+    cell.textLabel.font = newFont;
+    
+    UIImage *alarmimage = [UIImage imageNamed:@"alarm.png"];
+    cell.imageView.image = alarmimage;
+    NSString *str;
+    if (item.OnOrOff) {
+        str = @"On";
+    }else{
+        str = @"Off";
+    }
+    cell.detailTextLabel.text = str;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     // Configure the cell...
     
@@ -93,14 +104,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //  NSLog(@"oh");
     SetViewController *setViewController = [[SetViewController alloc] init];
     
     NSArray *items = [[AlarmItemStore sharedStore] allItems];
     AlarmItem *selectedItem = items[indexPath.row];
     
     setViewController.item = selectedItem;
-//    setViewController.item = selectedItem;
     
     [self.navigationController pushViewController:setViewController
                                          animated:YES];
@@ -120,7 +129,6 @@
 
 - (IBAction)addNewItem:(id)sender
 {
-    //  NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
     
     AlarmItem *newItem = [[AlarmItemStore sharedStore] createItem];
     NSInteger lastRow = [[[AlarmItemStore sharedStore] allItems] indexOfObject:newItem];
@@ -135,7 +143,6 @@
     AlarmItem *selectedItem = items[indexPath.row];
     
     setViewController.item = selectedItem;
-//    setViewController.item = selectedItem;
     
     [self.navigationController pushViewController:setViewController
                                          animated:YES];
@@ -143,7 +150,8 @@
 
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
-    return [self init];
+    self = [super initWithStyle:style];
+    return self;
 }
 
 /*
