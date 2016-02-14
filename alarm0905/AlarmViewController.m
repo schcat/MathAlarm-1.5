@@ -7,10 +7,8 @@
 //
 
 #import "AlarmViewController.h"
-#import "AppDelegate.h"
 #import "ListViewController.h"
 #import "AlarmQuestion.h"
-#import "SetViewController.h"
 #import "AlarmItemStore.h"
 #import <AVFoundation/AVFoundation.h>
 

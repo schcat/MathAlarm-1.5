@@ -85,8 +85,8 @@
     UIFont *newFont = [UIFont systemFontOfSize:16];
     cell.textLabel.font = newFont;
     
-    UIImage *alarmimage = [UIImage imageNamed:@"alarm.png"];
-    cell.imageView.image = alarmimage;
+//    UIImage *alarmimage = [UIImage imageNamed:@"alarm.jpg"];
+//    cell.imageView.image = alarmimage;
     NSString *str;
     if (item.OnOrOff) {
         str = @"On";
